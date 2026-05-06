@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アプリミット - サポート / Support</title>
+  <meta name="description" content="アプリミットのサポートページ。AppLimit Support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #aeaeb2;
+      --border: #e5e5ea;
+      --accent: #8e8e93;
+      --subtle-rose: #c4a4a4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .header .subtitle {
+      font-size: 14px;
+      color: var(--text-tertiary);
+    }
+
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .lang-toggle button {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle button.active {
+      background: var(--text-primary);
+      color: var(--surface);
+      border-color: var(--text-primary);
+    }
+
+    .lang-toggle button:hover:not(.active) {
+      border-color: var(--accent);
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    .card ul li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      background: var(--subtle-rose);
+      border-radius: 50%;
+    }
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      color: var(--text-secondary);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hero .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #e8e3de 0%, #d4ccc5 100%);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero .app-name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero .app-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 12px 32px;
+      background: var(--text-primary);
+      color: var(--surface);
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .contact-button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--text-secondary);
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 16px 60px;
+      }
+
+      .card {
+        padding: 28px 24px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="app-icon">⏳</div>
+      <p class="app-name">アプリミット</p>
+      <p class="app-desc">穏やかに、アプリの使いすぎを見直すアプリ</p>
+    </div>
+
+    <div class="lang-toggle">
+      <button class="active" onclick="switchLang('ja')">日本語</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- Japanese -->
+    <div id="lang-ja" class="lang-section active">
+      <div class="card">
+        <h2>アプリミットについて</h2>
+        <p>アプリミットは、Apple の ScreenTime API を活用して、特定のアプリの使用時間を穏やかに管理するアプリです。制限時間に達すると画面にやさしいリマインダーが表示され、他のことに目を向けるきっかけを作ります。</p>
+      </div>
+
+      <div class="card">
+        <h2>よくある質問</h2>
+
+        <h3>アプリの制限を設定するには？</h3>
+        <p>ホーム画面の「＋」ボタンからアプリを選択し、1日あたりの制限時間を設定してください。</p>
+
+        <div class="section-divider"></div>
+
+        <h3>制限がかかった後、アプリを使うには？</h3>
+        <p>「ひと息チケット」を使うことで、その日の間だけ制限を一時的に解除できます。</p>
+
+        <div class="section-divider"></div>
+
+        <h3>ひと息チケットとは？</h3>
+        <p>アプリの制限を一時的に解除するためのアイテムです。アプリ内から購入できます。毎日一定数が無料で付与されます。</p>
+
+        <div class="section-divider"></div>
+
+        <h3>データはどこに保存されますか？</h3>
+        <p>すべてのデータはお使いのデバイス上にのみ保存されます。外部サーバーへの送信は一切行いません。</p>
+
+        <div class="section-divider"></div>
+
+        <h3>アプリが正しく動作しません</h3>
+        <p>以下をお試しください:</p>
+        <ul>
+          <li>設定 → スクリーンタイム で、本アプリの権限が有効になっているか確認する</li>
+          <li>アプリを完全に終了して再起動する</li>
+          <li>デバイスを再起動する</li>
+        </ul>
+        <p>上記で解決しない場合は、下記のお問い合わせ先までご連絡ください。</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <h2>お問い合わせ</h2>
+        <p>ご質問、不具合の報告、ご要望がございましたらお気軽にご連絡ください。</p>
+        <div style="margin-top: 20px;">
+          <a href="https://forms.gle/FHr9dXQhpzz6qNXh9" target="_blank" rel="noopener noreferrer" class="contact-button">お問い合わせフォームを開く</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-section">
+      <div class="card">
+        <h2>About AppLimit</h2>
+        <p>AppLimit is an app that uses Apple's ScreenTime API to gently manage your app usage time. When you reach your set time limit, a gentle reminder appears on screen, encouraging you to turn your attention to other activities.</p>
+      </div>
+
+      <div class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>How do I set app restrictions?</h3>
+        <p>Tap the "+" button on the home screen, select an app, and set a daily time limit.</p>
+
+        <div class="section-divider"></div>
+
+        <h3>How can I use an app after it's been restricted?</h3>
+        <p>You can use a "Break Ticket" to temporarily lift the restriction for the rest of the day.</p>
+
+        <div class="section-divider"></div>
+
+        <h3>What are Break Tickets?</h3>
+        <p>Break Tickets are items that temporarily lift app restrictions. You can purchase them within the app, and a certain number are given free each day.</p>
+
+        <div class="section-divider"></div>
+
+        <h3>Where is my data stored?</h3>
+        <p>All data is stored exclusively on your device. No data is ever sent to external servers.</p>
+
+        <div class="section-divider"></div>
+
+        <h3>The app isn't working properly</h3>
+        <p>Please try the following:</p>
+        <ul>
+          <li>Go to Settings → Screen Time and confirm that the app's permissions are enabled</li>
+          <li>Fully quit and restart the app</li>
+          <li>Restart your device</li>
+        </ul>
+        <p>If the issue persists, please contact us using the information below.</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <h2>Contact Us</h2>
+        <p>For questions, bug reports, or feature requests, feel free to reach out.</p>
+        <div style="margin-top: 20px;">
+          <a href="https://forms.gle/FHr9dXQhpzz6qNXh9" target="_blank" rel="noopener noreferrer" class="contact-button">Open Contact Form</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 thashimoto. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="./privacy-policy.html">プライバシーポリシー / Privacy Policy</a></p>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-toggle button').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.querySelector('.lang-toggle button[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+    }
+  </script>
+</body>
+</html>

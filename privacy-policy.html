@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アプリミット - プライバシーポリシー / Privacy Policy</title>
+  <meta name="description" content="アプリミットのプライバシーポリシー。AppLimit Privacy Policy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #aeaeb2;
+      --border: #e5e5ea;
+      --accent: #8e8e93;
+      --subtle-rose: #c4a4a4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .header .subtitle {
+      font-size: 14px;
+      color: var(--text-tertiary);
+    }
+
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .lang-toggle button {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle button.active {
+      background: var(--text-primary);
+      color: var(--surface);
+      border-color: var(--text-primary);
+    }
+
+    .lang-toggle button:hover:not(.active) {
+      border-color: var(--accent);
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    .card ul li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      background: var(--subtle-rose);
+      border-radius: 50%;
+    }
+
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--text-secondary);
+    }
+
+    .lang-section {
+      display: none;
+    }
+
+    .lang-section.active {
+      display: block;
+    }
+
+    .effective-date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 16px 60px;
+      }
+
+      .card {
+        padding: 28px 24px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>プライバシーポリシー</h1>
+      <p class="subtitle">Privacy Policy</p>
+    </div>
+
+    <div class="lang-toggle">
+      <button class="active" onclick="switchLang('ja')">日本語</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- Japanese -->
+    <div id="lang-ja" class="lang-section active">
+      <p class="effective-date">施行日: 2026年5月7日</p>
+
+      <div class="card">
+        <h2>はじめに</h2>
+        <p>アプリミット（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人データの保護に努めます。本プライバシーポリシーでは、本アプリにおけるデータの取り扱いについて説明します。</p>
+      </div>
+
+      <div class="card">
+        <h2>データの収集について</h2>
+        <p>本アプリは、外部サーバーへのデータ送信を一切行いません。すべてのデータはお使いのデバイス上でのみ処理・保存されます。</p>
+        <p>本アプリは以下のデータを使用しますが、いずれもデバイス外に送信されることはありません。</p>
+        <ul>
+          <li>Apple ScreenTime API を通じたアプリ使用状況データ（デバイス上でのみ処理）</li>
+          <li>ユーザーが設定したアプリ制限の設定情報</li>
+          <li>アプリ内課金の購入履歴（Apple により管理）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>第三者へのデータ提供</h2>
+        <p>本アプリは、ユーザーの個人データを第三者に提供、販売、共有することはありません。</p>
+      </div>
+
+      <div class="card">
+        <h2>Apple ScreenTime API の利用</h2>
+        <p>本アプリは Apple の ScreenTime フレームワーク（FamilyControls、DeviceActivity、ManagedSettings）を使用しています。これらの API を通じて取得されるデータは、Apple のプライバシー設計により、アプリ開発者がアクセスできない形で保護されています。</p>
+      </div>
+
+      <div class="card">
+        <h2>アプリ内課金</h2>
+        <p>本アプリではアプリ内課金（消耗型）を提供しています。課金の処理は Apple の App Store を通じて行われ、決済情報は Apple が管理します。開発者が決済情報にアクセスすることはありません。</p>
+      </div>
+
+      <div class="card">
+        <h2>お子様のプライバシー</h2>
+        <p>本アプリは、13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+      </div>
+
+      <div class="card">
+        <h2>ポリシーの変更</h2>
+        <p>本プライバシーポリシーは、必要に応じて更新されることがあります。重要な変更がある場合は、本ページにて通知いたします。</p>
+      </div>
+
+      <div class="card">
+        <h2>お問い合わせ</h2>
+        <p>プライバシーに関するご質問がございましたら、以下のフォームよりご連絡ください。</p>
+        <p><a href="https://forms.gle/FHr9dXQhpzz6qNXh9" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">お問い合わせフォーム →</a></p>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-section">
+      <p class="effective-date">Effective Date: May 7, 2026</p>
+
+      <div class="card">
+        <h2>Introduction</h2>
+        <p>AppLimit ("the App") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how data is handled within the App.</p>
+      </div>
+
+      <div class="card">
+        <h2>Data Collection</h2>
+        <p>The App does not send any data to external servers. All data is processed and stored exclusively on your device.</p>
+        <p>The App uses the following data, none of which is transmitted outside your device:</p>
+        <ul>
+          <li>App usage data through Apple's ScreenTime API (processed on-device only)</li>
+          <li>App restriction settings configured by the user</li>
+          <li>In-app purchase history (managed by Apple)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Third-Party Data Sharing</h2>
+        <p>The App does not provide, sell, or share your personal data with any third parties.</p>
+      </div>
+
+      <div class="card">
+        <h2>Apple ScreenTime API Usage</h2>
+        <p>The App uses Apple's ScreenTime frameworks (FamilyControls, DeviceActivity, ManagedSettings). Data obtained through these APIs is protected by Apple's privacy design and is not accessible to the app developer.</p>
+      </div>
+
+      <div class="card">
+        <h2>In-App Purchases</h2>
+        <p>The App offers consumable in-app purchases. All payment processing is handled through Apple's App Store, and payment information is managed by Apple. The developer does not have access to your payment information.</p>
+      </div>
+
+      <div class="card">
+        <h2>Children's Privacy</h2>
+        <p>The App does not intentionally collect personal information from children under 13 years of age.</p>
+      </div>
+
+      <div class="card">
+        <h2>Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated as needed. Significant changes will be communicated on this page.</p>
+      </div>
+
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p>If you have any questions regarding privacy, please reach out through our contact form.</p>
+        <p><a href="https://forms.gle/FHr9dXQhpzz6qNXh9" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Contact Form →</a></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 thashimoto. All rights reserved.</p>
+      <p style="margin-top: 8px;"><a href="./index.html">サポート / Support</a></p>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-toggle button').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.querySelector('.lang-toggle button[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+    }
+  </script>
+</body>
+</html>
